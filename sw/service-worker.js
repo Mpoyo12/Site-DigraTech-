@@ -6,7 +6,7 @@ const urlsToCache = [
 ];
 
 // Installation
-self.addEventListener('install', (event) => {
+self.addEventListener('install',self.skipWaiting(); // active immédiatement le nouveau SW (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -16,7 +16,7 @@ self.addEventListener('install', (event) => {
 });
 
 // Activation
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', self.client.claim(); // prend le contrôle sans recharger(event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
