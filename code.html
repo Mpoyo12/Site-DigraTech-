@@ -62,5 +62,29 @@
       }
     }
   </script>
+  <h3>Ajouter une relation transférentielle</h3>
+<form id="relationForm">
+  <label for="nom">Nom :</label><br>
+  <input type="text" id="nom" name="nom" required><br><br>
+
+  <label for="description">Description :</label><br>
+  <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+  <label for="type">Type de relation :</label><br>
+  <select id="type" name="type" required>
+    <option value="">--Choisir--</option>
+    <option value="familiale">Familiale</option>
+    <option value="amicale">Amicale</option>
+    <option value="professionnelle">Professionnelle</option>
+    <option value="autre">Autre</option>
+  </select><br><br>
+
+  <button type="submit">Ajouter</button>
+</form>
+
+<div id="listeRelations">
+  <h3>Relations enregistrées :</h3>
+  <ul id="relations"></ul>
+</div>
 </body>
 </html>
