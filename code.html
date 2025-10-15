@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Digra - Journal émotionnel</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f0f2f5;
+      text-align: center;
+      padding: 20px;
+    }
+    textarea {
+      width: 90%;
+      height: 100px;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Bienvenue sur <b>Digra</b></h2>
+  <p>Exprime ton ressenti du jour :</p>
+  <textarea id="ressenti" placeholder="Je me sens..."></textarea><br>
+  <button onclick="enregistrer()">Enregistrer</button>
+  <p id="confirmation" style="color: green; margin-top: 15px;"></p>
+
+  <script>
+    function enregistrer() {
+        document.getElementById("confirmation").innerText = "💾 Émotion enregistrée !";
+      } else {
+        alert("Écris quelque chose avant d’enregistrer !");
+      }
+    }
+  </script>
+</body>
+</html>
