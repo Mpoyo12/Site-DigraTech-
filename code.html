@@ -32,6 +32,13 @@
       background-color: #0056b3;
     }
   </style>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw/service-worker.js')
+[10-15 22:07] Chat: .then(() => console.log('Service Worker enregistré'))
+      .catch((error) => console.error('Erreur SW :', error));
+  }
+      </script>
 </head>
 <body>
   <h2>Bienvenue sur <b>Digra</b></h2>
