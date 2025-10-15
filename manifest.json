@@ -1,7 +1,7 @@
 {
   "name": "Digra",
   "short_name": "Digra",
-  "description" "application mobile pour gérer les émotions et les relations transférentielles.",
+  "description": "application mobile pour gérer les émotions et les relations transférentielles.",
   "start_url": "code.html",
   "display": "standalone",
   "background_color": "#ffffff",
